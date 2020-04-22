@@ -28,5 +28,14 @@ namespace BankAccountCore
         {
             Balance += amt;
         }
+
+        /// <summary>
+        /// Display current balance, as currency.
+        /// </summary>
+        /// <returns></returns>
+        public string CheckBalance()
+        {
+            return Balance.ToString("c");
+        }
     }
 }

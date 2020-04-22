@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankAccountCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace BankAccountForms
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double initialBalance = Convert.ToDouble(initialBalanceTxt.Text);
+            Account acc = new Account(initialBalance);
+
+            MessageBox.Show($"You created an account with {acc.CheckBalance()}");
         }
     }
 }
